@@ -1,0 +1,83 @@
+/* ====== COLORES INSTITUCIONALES ====== */
+.root {
+    -color-blanco: #FFFFFF;
+    -color-fucsia: #F22E8A;
+    -color-rosa-palido: #F2DCE8;
+    -color-azul: #1D2659;
+    -color-azul-oscuro: #161C40;
+}
+
+/* ====== FONDO GENERAL ====== */
+.background {
+    -fx-background-color: -color-rosa-palido;
+}
+
+/* ====== BOTONES ====== */
+.boton-principal {
+    -mfx-button-type: RAISED;
+    -fx-background-color: -color-fucsia;
+    -fx-text-fill: -color-blanco;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-background-radius: 6px;
+    -mfx-ripple-color: -color-rosa-palido;
+}
+
+.boton-principal:hover {
+    -fx-background-color: derive(-color-fucsia, -10%);
+}
+
+.boton-principal:pressed {
+    -fx-background-color: -color-azul;
+}
+
+/* ====== CAMPOS DE TEXTO ====== */
+.mfx-text-field {
+    -fx-background-color: -color-blanco;
+    -fx-border-color: -color-fucsia;
+    -fx-text-fill: -color-azul;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-font-family: "Segoe UI", sans-serif;
+    -fx-font-size: 13px;
+}
+
+/* ====== SCROLLPANE ====== */
+.scroll-pane {
+    -fx-background-color: -color-rosa-palido;
+}
+
+/* ====== TABLA ====== */
+.table-view {
+    -fx-background-color: -color-blanco;
+    -fx-border-color: -color-fucsia;
+    -fx-table-cell-border-color: transparent;
+    -fx-text-fill: -color-azul;
+    -fx-font-family: "Segoe UI", sans-serif;
+}
+
+.table-column-header {
+    -fx-background-color: -color-azul;
+    -fx-text-fill: -color-blanco;
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+}
+
+/* ====== HBOX, VBOX ====== */
+.hbox, .vbox {
+    -fx-spacing: 20;
+    -fx-padding: 10;
+}
+
+/* ====== TÍTULOS Y TEXTOS ====== */
+.label {
+    -fx-text-fill: -color-azul-oscuro;
+    -fx-font-size: 14px;
+    -fx-font-family: "Segoe UI", sans-serif;
+}
+
+.title {
+    -fx-text-fill: -color-azul;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}

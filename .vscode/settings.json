@@ -1,0 +1,23 @@
+{
+  "java.project.sourcePaths": ["src"],
+  "java.project.referencedLibraries": [
+    "/Users/martin/SGEF-Demo/lib/javafx-sdk-24.0.1/lib/javafx.media.jar",
+    "/Users/martin/SGEF-Demo/lib/javafx-sdk-24.0.1/lib/javafx.web.jar",
+    "/Users/martin/SGEF-Demo/lib/javafx-sdk-24.0.1/lib/javafx.fxml.jar",
+    "/Users/martin/SGEF-Demo/lib/javafx-sdk-24.0.1/lib/javafx.swing.jar",
+    "/Users/martin/SGEF-Demo/lib/javafx-sdk-24.0.1/lib/javafx.controls.jar",
+    "/Users/martin/SGEF-Demo/lib/javafx-sdk-24.0.1/lib/javafx.base.jar",
+    "/Users/martin/SGEF-Demo/lib/javafx-sdk-24.0.1/lib/javafx.graphics.jar",
+    "lib/**/*.jar"
+],
+
+  "java.configuration.runtimes": [
+    {
+      "name": "JavaSE-24",
+      "path": "/opt/homebrew/opt/openjdk/libexec/openjdk.jdk/Contents/Home",
+      "default": true
+    }
+    ]
+
+
+}
