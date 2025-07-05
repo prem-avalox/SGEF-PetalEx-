@@ -1,23 +1,27 @@
 {
   "java.project.sourcePaths": ["src"],
   "java.project.referencedLibraries": [
-    "/Users/martin/SGEF-Demo/lib/javafx-sdk-24.0.1/lib/javafx.media.jar",
-    "/Users/martin/SGEF-Demo/lib/javafx-sdk-24.0.1/lib/javafx.web.jar",
-    "/Users/martin/SGEF-Demo/lib/javafx-sdk-24.0.1/lib/javafx.fxml.jar",
-    "/Users/martin/SGEF-Demo/lib/javafx-sdk-24.0.1/lib/javafx.swing.jar",
-    "/Users/martin/SGEF-Demo/lib/javafx-sdk-24.0.1/lib/javafx.controls.jar",
-    "/Users/martin/SGEF-Demo/lib/javafx-sdk-24.0.1/lib/javafx.base.jar",
-    "/Users/martin/SGEF-Demo/lib/javafx-sdk-24.0.1/lib/javafx.graphics.jar",
+    "lib/javafx-sdk-24.0.1/lib/javafx.media.jar",
+    "lib/javafx-sdk-24.0.1/lib/javafx.web.jar",
+    "lib/javafx-sdk-24.0.1/lib/javafx.fxml.jar",
+    "lib/javafx-sdk-24.0.1/lib/javafx.swing.jar",
+    "lib/javafx-sdk-24.0.1/lib/javafx.controls.jar",
+    "lib/javafx-sdk-24.0.1/lib/javafx.base.jar",
+    "lib/javafx-sdk-24.0.1/lib/javafx.graphics.jar",
     "lib/**/*.jar"
-],
+  ],
 
-  "java.configuration.runtimes": [
-    {
-      "name": "JavaSE-24",
-      "path": "/opt/homebrew/opt/openjdk/libexec/openjdk.jdk/Contents/Home",
-      "default": true
-    }
-    ]
-
-
+"java.configuration.runtimes": [
+  {
+    "name": "JavaSE-24",
+    "path": "/opt/homebrew/opt/openjdk/libexec/openjdk.jdk/Contents/Home",
+    "default": true
+  },
+  {
+    "name": "JavaSE-24",
+    "path": "C:\\Program Files\\Java\\jdk-24",
+    "default": false
+  }
+]
 }
+
