@@ -17,7 +17,7 @@
     <TextField fx:id="telefonoField" promptText="Teléfono" GridPane.rowIndex="1" GridPane.columnIndex="0" />
     <TextField fx:id="direccionField" promptText="Dirección" GridPane.rowIndex="1" GridPane.columnIndex="1" />
 
-    <ComboBox fx:id="estadoVentaCombo" promptText="Estado de Venta" GridPane.rowIndex="2" GridPane.columnIndex="0" />
+    <ComboBox fx:id="estadoCombo" promptText="Estado" GridPane.rowIndex="2" GridPane.columnIndex="0" />
 
     <Button text="Actualizar" onAction="#actualizarProveedor" GridPane.rowIndex="3" GridPane.columnIndex="0" maxWidth="Infinity" />
     <Button text="Cancelar" onAction="#cerrarVentana" GridPane.rowIndex="3" GridPane.columnIndex="1" maxWidth="Infinity" />
