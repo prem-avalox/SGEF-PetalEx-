@@ -30,3 +30,17 @@ SGEF-PetalEx-/
 
 1. Refrenciar la libreria *lib* en **Referenced libraries**
 2. Usa el botón de "Run" o F5 para lanzar el programa
+
+# !Importante
+
+- Cambiar la ruta en el archivo `launch.json` para windows
+En tu archivo `settings.json` (o equivalente), establece la ruta del JDK:
+
+```json
+"java.configuration.runtimes": [
+  {
+    "name": "JavaSE-24",
+    "path": "/ruta/a/tu/jdk",
+    "default": true
+  }
+]
