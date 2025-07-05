@@ -1,0 +1,33 @@
+package main.controllers;
+
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
+import javafx.scene.control.TableView;
+import javafx.stage.Stage;
+
+public class ConsultarProveedoresController {
+
+    @FXML
+    private TableView<?> tablaProveedores;
+
+    @FXML
+    private void consultarProveedor(ActionEvent event) {
+        // TODO: Implementar lógica real de búsqueda
+        System.out.println("Buscando proveedores...");
+        mostrarMensaje("Búsqueda de proveedores ejecutada (simulada).");
+    }
+
+    @FXML
+    private void cerrarVentana(ActionEvent event) {
+        Stage stage = (Stage) tablaProveedores.getScene().getWindow();
+        stage.close();
+    }
+
+    private void mostrarMensaje(String mensaje) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setHeaderText(null);
+        alert.setContentText(mensaje);
+        alert.showAndWait();
+    }
+}

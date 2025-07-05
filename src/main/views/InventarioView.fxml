@@ -1,20 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ComboBox?>
-<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 
 <BorderPane prefHeight="800.0" prefWidth="1200.0"
-    xmlns="http://javafx.com/javafx/24.0.1"
-    xmlns:fx="http://javafx.com/fxml/1"
-    fx:controller="main.controllers.InventarioController">
+            xmlns="http://javafx.com/javafx/24.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="main.controllers.InventarioController">
 
     <top>
         <HBox alignment="CENTER_LEFT" style="-fx-padding: 10 20;">
@@ -23,65 +19,33 @@
     </top>
 
     <center>
-        <ScrollPane fitToHeight="true" fitToWidth="true" style="-fx-padding: 10;">
-            <VBox alignment="TOP_CENTER" spacing="20" style="-fx-padding: 30; -fx-max-width: 1100;">
-                <HBox alignment="CENTER" maxWidth="Infinity" spacing="20">
-                    <TextField fx:id="codigoField" promptText="Código" prefWidth="318.0"
-                        HBox.hgrow="ALWAYS" />
-                    <TextField fx:id="nombreField" promptText="Nombre de la Flor" prefWidth="318.0"
-                        HBox.hgrow="ALWAYS" />
-                    <TextField fx:id="fechaCompraField" promptText="Fecha de Compra"
-                        prefWidth="318.0" HBox.hgrow="ALWAYS" />
-                </HBox>
-                <HBox alignment="CENTER" maxWidth="Infinity" spacing="20">
-                    <TextField fx:id="proveedorField" promptText="Proveedor" prefWidth="318.0"
-                        HBox.hgrow="ALWAYS" />
-                    <TextField fx:id="cantidadField" promptText="Cantidad" prefWidth="318.0"
-                        HBox.hgrow="ALWAYS" />
-                    <TextField fx:id="unidadField" promptText="Unidad de Medida" prefWidth="318.0"
-                        HBox.hgrow="ALWAYS" />
-                </HBox>
-                <HBox alignment="CENTER" maxWidth="Infinity" spacing="20">
-                    <TextField fx:id="costoUnitarioField" promptText="Costo Unitario"
-                        prefWidth="318.0" HBox.hgrow="ALWAYS" />
-                    <TextField fx:id="costoTotalField" promptText="Costo Total" prefWidth="318.0"
-                        HBox.hgrow="ALWAYS" />
-                    <TextField fx:id="fechaVencimientoField" promptText="Fecha de Vencimiento"
-                        prefWidth="318.0" HBox.hgrow="ALWAYS" />
-                </HBox>
-                <HBox alignment="CENTER" maxWidth="Infinity" spacing="20">
-                    <ComboBox fx:id="estadoComboBox" promptText="Estado del Producto"
-                        prefWidth="318.0" HBox.hgrow="ALWAYS" />
-                    <Pane prefWidth="318.0" />
-                    <Pane prefWidth="318.0" />
-                </HBox>
-                <HBox alignment="CENTER" maxWidth="Infinity" spacing="20.0">
-                    <Button maxWidth="300" onAction="#registrarProducto" prefWidth="318.0"
-                        text="Registrar Producto" />
-                    <Button maxWidth="300" onAction="#consultarProducto" prefWidth="318.0"
-                        text="Consultar Producto" />
-                    <Button maxWidth="300" onAction="#actualizarProducto" prefWidth="318.0"
-                        text="Actualizar Datos" />
-                    <Button maxWidth="300" onAction="#actualizarEstadoProducto" prefWidth="318.0"
-                        text="Actualizar Estado" />
-                </HBox>
-                <TableView fx:id="tablaInventario" maxHeight="Infinity" maxWidth="Infinity"
-                    prefHeight="400" VBox.vgrow="ALWAYS">
-                    <columns>
-                        <TableColumn text="Código" />
-                        <TableColumn text="Nombre" />
-                        <TableColumn text="Fecha de Compra" />
-                        <TableColumn text="Proveedor" />
-                        <TableColumn text="Cantidad" />
-                        <TableColumn text="Unidad" />
-                        <TableColumn text="Costo Unitario" />
-                        <TableColumn text="Costo Total" />
-                        <TableColumn text="Fecha de Vencimiento" />
-                        <TableColumn text="Estado" />
-                    </columns>
-                </TableView>
-            </VBox>
-        </ScrollPane>
+        <VBox spacing="20" style="-fx-padding: 30;">
+            
+            <!-- Botones de acción -->
+            <HBox spacing="20">
+                <Button onAction="#registrarProducto" text="Registrar Producto" />
+                <Button onAction="#consultarProducto" text="Consultar Producto" />
+                <Button onAction="#actualizarProducto" text="Actualizar Datos" />
+                <Button onAction="#actualizarEstadoProducto" text="Actualizar Estado" />
+            </HBox>
+            
+            <!-- Tabla de inventario (opcional, si quieres dejarla aquí) -->
+            <TableView fx:id="tablaInventario" prefHeight="600" prefWidth="1100">
+                <columns>
+                    <TableColumn text="Código" />
+                    <TableColumn text="Nombre" />
+                    <TableColumn text="Fecha de Compra" />
+                    <TableColumn text="Proveedor" />
+                    <TableColumn text="Cantidad" />
+                    <TableColumn text="Unidad" />
+                    <TableColumn text="Costo Unitario" />
+                    <TableColumn text="Costo Total" />
+                    <TableColumn text="Fecha de Vencimiento" />
+                    <TableColumn text="Estado" />
+                </columns>
+            </TableView>
+            
+        </VBox>
     </center>
 
 </BorderPane>

@@ -1,14 +1,14 @@
 package main.controllers;
 
+import java.io.IOException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
-
-import java.io.IOException;
 
 public class ProveedoresController {
 
@@ -31,34 +31,49 @@ public class ProveedoresController {
             stage.show();
         } catch (IOException e) {
             e.printStackTrace();
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setHeaderText("Error al regresar al menú");
-            alert.setContentText(e.getMessage());
-            alert.showAndWait();
+            mostrarError("Error al regresar al menú", e.getMessage());
         }
     }
 
     @FXML
     private void registrarProveedor() {
-        // TODO: lógica para registrar proveedor
-        System.out.println("Registrar proveedor...");
+        abrirVentana("/main/views/RegistrarProveedoresView.fxml", "Registrar Proveedor");
     }
 
     @FXML
     private void consultarProveedor() {
-        // TODO: lógica para consultar proveedor
-        System.out.println("Consultar proveedor...");
+        abrirVentana("/main/views/ConsultarProveedoresView.fxml", "Consultar Proveedor");
     }
 
     @FXML
     private void actualizarProveedor() {
-        // TODO: lógica para actualizar proveedor
-        System.out.println("Actualizar proveedor...");
+        abrirVentana("/main/views/ActualizarInfoProveedoresView.fxml", "Actualizar información Proveedor");
     }
 
     @FXML
     private void actualizarEstadoProveedor() {
-        // TODO: lógica para actualizar estado
-        System.out.println("Actualizar estado de proveedor...");
+        abrirVentana("/main/views/ActualizarEstadoProveedoresView.fxml", "Actualizar Estado de Proveedor");
+    }
+
+    private void abrirVentana(String fxmlPath, String titulo) {
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource(fxmlPath));
+
+            Stage stage = new Stage();
+            stage.setTitle(titulo);
+            stage.setScene(new Scene(root));
+            stage.initModality(Modality.APPLICATION_MODAL);
+            stage.showAndWait();
+        } catch (IOException e) {
+            e.printStackTrace();
+            mostrarError("Error al abrir la ventana", e.getMessage());
+        }
+    }
+
+    private void mostrarError(String header, String content) {
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setHeaderText(header);
+        alert.setContentText(content);
+        alert.showAndWait();
     }
 }

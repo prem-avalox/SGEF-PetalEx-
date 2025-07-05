@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -37,22 +38,35 @@ public class VentasController {
             alert.showAndWait();
         }
     }
-
     @FXML
-    private void registrarVenta() {
-        // TODO: Implementar lógica
-        System.out.println("Registrando venta...");
+   public void abrirRegistrarVenta(ActionEvent event) {
+        abrirVentana("/main/views/RegistrarVentas.fxml", "Registrar Venta");
     }
-
     @FXML
-    private void consultarVenta() {
-        // TODO: Implementar lógica
-        System.out.println("Consultando venta...");
+    public void abrirConsultarVenta(ActionEvent event) {
+        abrirVentana("/main/views/ConsultarVentas.fxml", "Consultar Venta");
     }
-
     @FXML
-    private void anularVenta() {
-        // TODO: Implementar lógica
-        System.out.println("Anulando venta...");
+    public void abrirActualizarVenta(ActionEvent event) {
+        abrirVentana("/main/views/ActualizarVentas.fxml", "Actualizar Venta");
+    }
+    @FXML
+    public void anularVenta(ActionEvent event) {
+        abrirVentana("/main/views/AnularVentas.fxml", "Anular Venta");
+    }
+    @FXML
+    private void abrirVentana(String ruta, String titulo) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource(ruta));
+            Parent root = loader.load();
+
+            Stage stage = new Stage();
+            stage.setTitle(titulo);
+            stage.setScene(new Scene(root));
+            stage.initModality(Modality.APPLICATION_MODAL);
+            stage.showAndWait();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }

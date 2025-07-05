@@ -1,27 +1,23 @@
 package main.controllers;
 
+import java.io.IOException;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.*;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
+import javafx.scene.control.TableView;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
-
-import java.io.IOException;
 
 public class AdminController {
 
     @FXML
-    private ComboBox<String> rolComboBox;
-
-    @FXML
-    private TextField nombreField, apellidoField, cedulaField, correoField, contrasenaField;
-
-    @FXML
     private TableView<?> tablaUsuarios;
 
- @FXML
+    @FXML
     private void volverMenu(ActionEvent event) {
         try {
             Parent root = FXMLLoader.load(getClass().getResource("/main/views/Main.fxml"));
@@ -31,34 +27,48 @@ public class AdminController {
             stage.show();
         } catch (IOException e) {
             e.printStackTrace();
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setHeaderText("Error al regresar al menú");
-            alert.setContentText(e.getMessage());
-            alert.showAndWait();
+            mostrarError("Error al regresar al menú", e.getMessage());
         }
     }
 
     @FXML
-    private void crearUsuario() {
-        // TODO: Implementar creación de usuario
-        System.out.println("Creando usuario...");
+    private void abrirCrearUsuario(ActionEvent event) {
+        abrirVentana("/main/views/CrearUsuarioView.fxml", "Crear Usuario");
     }
 
     @FXML
-    private void consultarUsuario() {
-        // TODO: Implementar consulta de usuario
-        System.out.println("Consultando usuario...");
+    private void abrirConsultarUsuario(ActionEvent event) {
+        abrirVentana("/main/views/ConsultarUsuarioView.fxml", "Consultar Usuario");
     }
 
     @FXML
-    private void actualizarUsuario() {
-        // TODO: Implementar actualización de usuario
-        System.out.println("Actualizando usuario...");
+    private void abrirActualizarUsuario(ActionEvent event) {
+        abrirVentana("/main/views/ActualizarInfoUsuarioView.fxml", "Actualizar información Usuario");
     }
 
     @FXML
-    private void inactivarUsuario() {
-        // TODO: Implementar lógica para inactivar usuario
-        System.out.println("Inactivando usuario...");
+    private void abrirInactivarUsuario(ActionEvent event) {
+        abrirVentana("/main/views/InactivarUsuarioView.fxml", "Inactivar Usuario");
+    }
+
+    private void abrirVentana(String fxmlPath, String titulo) {
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource(fxmlPath));
+            Stage stage = new Stage();
+            stage.setTitle(titulo);
+            stage.setScene(new Scene(root));
+            stage.initModality(Modality.APPLICATION_MODAL);
+            stage.showAndWait();
+        } catch (IOException e) {
+            e.printStackTrace();
+            mostrarError("Error al abrir la ventana", e.getMessage());
+        }
+    }
+
+    private void mostrarError(String header, String content) {
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setHeaderText(header);
+        alert.setContentText(content);
+        alert.showAndWait();
     }
 }
