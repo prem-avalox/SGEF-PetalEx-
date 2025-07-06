@@ -21,14 +21,18 @@
     </top>
 
     <center>
-        <VBox alignment="CENTER" spacing="20" style="-fx-padding: 30;">
-            <HBox spacing="20" alignment="CENTER">
+        <VBox spacing="20" style="-fx-padding: 30;">
+            
+            <!-- Botones de acción -->
+            <HBox spacing="20" alignment="CENTER_LEFT">
                 <Button text="Crear Usuario" onAction="#abrirCrearUsuario" prefWidth="200"/>
                 <Button text="Consultar Usuario" onAction="#abrirConsultarUsuario" prefWidth="200"/>
                 <Button text="Actualizar Usuario" onAction="#abrirActualizarUsuario" prefWidth="200"/>
                 <Button text="Inactivar Usuario" onAction="#abrirInactivarUsuario" prefWidth="200"/>
             </HBox>
-            <TableView fx:id="tablaUsuarios" prefHeight="500" prefWidth="1000">
+            
+            <!-- Tabla de usuarios -->
+            <TableView fx:id="tablaUsuarios" prefHeight="600" prefWidth="1100">
                 <columns>
                     <TableColumn text="Nombre" />
                     <TableColumn text="Apellido" />
@@ -38,6 +42,7 @@
                     <TableColumn text="Estado" />
                 </columns>
             </TableView>
+            
         </VBox>
     </center>
 

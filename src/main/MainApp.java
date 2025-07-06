@@ -9,9 +9,9 @@ import javafx.stage.Stage;
 public class MainApp extends Application {
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("/main/views/Main.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/main/views/LoginView.fxml"));
         Scene scene = new Scene(root);
-        stage.setTitle("Sistema de Gestión de Exportación de Flores - SGEF");
+        stage.setTitle("SGEF - Inicio de Sesión");
         stage.setScene(scene);
         stage.show();
     }
