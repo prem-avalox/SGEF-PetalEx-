@@ -12,16 +12,13 @@
   ],
 
 "java.configuration.runtimes": [
-  {
-    "name": "JavaSE-24",
-    "path": "/opt/homebrew/opt/openjdk/libexec/openjdk.jdk/Contents/Home",
-    "default": true
-  },
+
   {
     "name": "JavaSE-24",
     "path": "C:\\Program Files\\Java\\jdk-24",
-    "default": false
+    "default": true
   }
-]
+],
+"java.debug.settings.onBuildFailureProceed": true
 }
 
