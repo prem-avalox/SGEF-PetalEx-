@@ -15,7 +15,7 @@ public class ActualizarUsuarioController {
     private ComboBox<String> rolComboBox;
 
     @FXML
-    private TextField nombreField, apellidoField, cedulaField, correoField;
+    private TextField nombreField, apellidoField, correoField;
 
     @FXML
     private PasswordField contrasenaField;
@@ -25,10 +25,6 @@ public class ActualizarUsuarioController {
         // TODO: Implementa la lógica para actualizar usuario aquí
         System.out.println("Actualizando usuario...");
 
-        if (nombreField.getText().isEmpty()) {
-            mostrarError("Campo vacío", "El nombre no puede estar vacío.");
-            return;
-        }
 
         cerrarVentana(event);
     }

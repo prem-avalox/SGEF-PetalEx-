@@ -33,7 +33,7 @@ public class LoginController {
                 Stage stage = (Stage) usuarioField.getScene().getWindow();
                 stage.setScene(new Scene(root));
                 stage.setTitle("Sistema de Gestión de Exportación de Flores - SGEF");
-                stage.centerOnScreen(); // ✅ CENTRAR LA VENTANA
+                stage.centerOnScreen(); 
 
             } catch (IOException e) {
                 e.printStackTrace();

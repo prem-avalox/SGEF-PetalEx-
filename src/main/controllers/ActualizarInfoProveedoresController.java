@@ -34,10 +34,7 @@ public class ActualizarInfoProveedoresController {
         String direccion = direccionField.getText();
         String estadoVenta = estadoVentaCombo.getValue();
 
-        if (ruc.isEmpty() || nombre.isEmpty() || telefono.isEmpty() || direccion.isEmpty() || estadoVenta == null) {
-            mostrarError("Datos incompletos", "Por favor, complete todos los campos.");
-            return;
-        }
+
 
         // Simulación de actualización
         System.out.println("Actualizando proveedor:");

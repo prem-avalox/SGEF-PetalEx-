@@ -4,24 +4,31 @@
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
 
-<GridPane xmlns="http://javafx.com/javafx/24.0.1"
-          xmlns:fx="http://javafx.com/fxml/1"
-          fx:controller="main.controllers.ActualizarUsuarioController"
-          hgap="20" vgap="15"
-          style="-fx-padding: 30;">
+<GridPane hgap="20" style="-fx-padding: 30;" vgap="15" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.controllers.ActualizarUsuarioController">
 
-    <ComboBox fx:id="rolComboBox" promptText="Rol" GridPane.rowIndex="0" GridPane.columnIndex="0" />
-    <TextField fx:id="nombreField" promptText="Nombre" GridPane.rowIndex="0" GridPane.columnIndex="1" />
+    <ComboBox fx:id="rolComboBox" promptText="Rol" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+    <TextField fx:id="nombreField" promptText="Nombre" GridPane.rowIndex="1" />
 
-    <TextField fx:id="apellidoField" promptText="Apellido" GridPane.rowIndex="1" GridPane.columnIndex="0" />
-    <TextField fx:id="cedulaField" promptText="Cédula" GridPane.rowIndex="1" GridPane.columnIndex="1" />
+    <TextField fx:id="apellidoField" promptText="Apellido" GridPane.columnIndex="1" GridPane.rowIndex="1" />
 
-    <TextField fx:id="correoField" promptText="Correo" GridPane.rowIndex="2" GridPane.columnIndex="0" />
-    <PasswordField fx:id="contrasenaField" promptText="Contraseña" GridPane.rowIndex="2" GridPane.columnIndex="1" />
+    <TextField fx:id="correoField" promptText="Correo" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+    <PasswordField fx:id="contrasenaField" promptText="Contraseña" GridPane.columnIndex="1" GridPane.rowIndex="2" />
 
-    <Button text="Actualizar" onAction="#actualizarUsuario" GridPane.rowIndex="3" GridPane.columnIndex="0" maxWidth="Infinity" />
-    <Button text="Cancelar" onAction="#cerrarVentana" GridPane.rowIndex="3" GridPane.columnIndex="1" maxWidth="Infinity" />
+    <Button maxWidth="Infinity" onAction="#actualizarUsuario" text="Actualizar" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+    <Button maxWidth="Infinity" onAction="#cerrarVentana" text="Cancelar" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+   <columnConstraints>
+      <ColumnConstraints />
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
 
 </GridPane>

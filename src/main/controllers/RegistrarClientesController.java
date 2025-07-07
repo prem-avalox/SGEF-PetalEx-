@@ -31,7 +31,6 @@ public class RegistrarClientesController {
         // TODO: Lógica real de registro
         System.out.println("Cliente registrado:");
         System.out.println("Identificador: " + identificadorField.getText());
-        mostrarMensaje("Cliente registrado correctamente.");
     }
 
     @FXML

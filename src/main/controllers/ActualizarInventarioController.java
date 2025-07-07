@@ -43,8 +43,6 @@ public class ActualizarInventarioController {
         System.out.println("Código: " + codigoField.getText());
         System.out.println("Nombre: " + nombreField.getText());
 
-        mostrarAlerta("Actualización exitosa", "El producto fue actualizado correctamente.");
-        cerrarVentana();
     }
 
     @FXML

@@ -14,8 +14,7 @@ public class ActualizarClientesController {
     @FXML
     private void actualizarCliente(ActionEvent event) {
         // TODO: Implementar lógica real de actualización
-        System.out.println("Actualizando información del cliente...");
-        mostrarMensaje("Información del cliente actualizada (simulado).");
+       
     }
 
     @FXML

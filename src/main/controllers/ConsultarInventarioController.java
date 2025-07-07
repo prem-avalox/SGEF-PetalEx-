@@ -15,7 +15,7 @@ public class ConsultarInventarioController {
     private void consultarProducto(ActionEvent event) {
         // TODO: Implementar lógica real de búsqueda en inventario
         System.out.println("Buscando productos en inventario...");
-        mostrarMensaje("Búsqueda ejecutada (simulada).");
+;
     }
 
     @FXML

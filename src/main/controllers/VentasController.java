@@ -32,10 +32,6 @@ public class VentasController {
             stage.show();
         } catch (IOException e) {
             e.printStackTrace();
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setHeaderText("Error al regresar al menú");
-            alert.setContentText(e.getMessage());
-            alert.showAndWait();
         }
     }
     @FXML

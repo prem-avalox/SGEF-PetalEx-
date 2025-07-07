@@ -33,12 +33,6 @@ public class RegistrarProveedoresController {
         String telefono = telefonoField.getText();
         String direccion = direccionField.getText();
         String estadoVenta = estadoVentaCombo.getValue();
-
-        if (ruc.isEmpty() || nombre.isEmpty() || telefono.isEmpty() || direccion.isEmpty() || estadoVenta == null) {
-            mostrarError("Datos incompletos", "Por favor, complete todos los campos.");
-            return;
-        }
-
         // Simulación de registro
         System.out.println("Registrando proveedor:");
         System.out.println("RUC: " + ruc);

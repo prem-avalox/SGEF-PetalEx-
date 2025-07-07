@@ -15,7 +15,7 @@ public class ConsultarProveedoresController {
     private void consultarProveedor(ActionEvent event) {
         // TODO: Implementar lógica real de búsqueda
         System.out.println("Buscando proveedores...");
-        mostrarMensaje("Búsqueda de proveedores ejecutada (simulada).");
+    ;
     }
 
     @FXML

@@ -27,7 +27,6 @@ public class AdminController {
             stage.show();
         } catch (IOException e) {
             e.printStackTrace();
-            mostrarError("Error al regresar al menú", e.getMessage());
         }
     }
 
@@ -61,7 +60,6 @@ public class AdminController {
             stage.showAndWait();
         } catch (IOException e) {
             e.printStackTrace();
-            mostrarError("Error al abrir la ventana", e.getMessage());
         }
     }
 

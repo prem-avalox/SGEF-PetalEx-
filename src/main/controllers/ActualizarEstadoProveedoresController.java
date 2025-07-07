@@ -18,9 +18,6 @@ public class ActualizarEstadoProveedoresController {
         // Aquí colocarías la lógica para actualizar el estado del proveedor en la base de datos
 
         System.out.println("Estado del proveedor actualizado.");
-
-        mostrarInfo("Actualización Exitosa", "El estado del proveedor ha sido actualizado correctamente.");
-
         cerrarVentana();
     }
 
@@ -37,7 +34,7 @@ public class ActualizarEstadoProveedoresController {
      * Método opcional para establecer dinámicamente el nombre del proveedor en el mensaje.
      */
     public void setNombreProveedor(String nombreProveedor) {
-        mensajeLabel.setText("¿Estás seguro que quieres actualizar el estado de " + nombreProveedor + "?");
+
     }
 
     /**

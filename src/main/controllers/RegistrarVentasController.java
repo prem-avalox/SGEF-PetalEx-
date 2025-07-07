@@ -17,14 +17,7 @@ public class RegistrarVentasController {
     @FXML
     private void guardarVenta(ActionEvent event) {
         try {
-            // Ejemplo simple de validación
-            if (ordenField.getText().isEmpty() || codigoField.getText().isEmpty()) {
-                Alert alert = new Alert(Alert.AlertType.WARNING);
-                alert.setHeaderText("Campos requeridos");
-                alert.setContentText("Por favor, complete los campos obligatorios.");
-                alert.showAndWait();
-                return;
-            }
+            // Ejemplo simple de validació
 
             // Aquí iría la lógica para guardar la venta (en BD o estructura)
             System.out.println("Venta registrada: Orden " + ordenField.getText());

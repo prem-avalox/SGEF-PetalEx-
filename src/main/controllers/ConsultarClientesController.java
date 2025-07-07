@@ -15,7 +15,7 @@ public class ConsultarClientesController {
     private void consultarCliente(ActionEvent event) {
         // TODO: Implementar lógica real de búsqueda
         System.out.println("Buscando clientes...");
-        mostrarMensaje("Búsqueda ejecutada (simulada).");
+       
     }
 
     @FXML

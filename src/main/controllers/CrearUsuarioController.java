@@ -27,7 +27,7 @@ public class CrearUsuarioController {
 
         // Ejemplo: validaciones simples
         if (nombreField.getText().isEmpty() || correoField.getText().isEmpty()) {
-            mostrarError("Campos vacíos", "Por favor, completa todos los campos obligatorios.");
+            
             return;
         }
 
